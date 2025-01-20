@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Test DOM XSS</title>
+</head>
+
+<body>
+    <!--DOM XSS-->
+    <input id="userMsg" type="text" placeholder="Enter Text Here" />
+    <button onclick="displayGivenMsg()">POST</button>
+    <h4 id="box"></h4>
+
+    <script>
+        //define a function that will display the output
+        function displayGivenMsg() {
+            const box = document.getElementById("box");
+            const userInput = document.getElementById("userMsg").value;
+            //to overwite under text box
+            box.innerHTML = userInput;
+            //clear the text box
+            document.getElementById("userMsg").value = "";
+        }
+    </script>
+</body>
+
+</html>
+
